@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document Center Georgia</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif}
+body{background:#f5f7fb;color:#222;line-height:1.6}
+header{background:#0A2540;color:#fff;padding:15px 25px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{width:60px;height:60px;border-radius:50%}
+.lang button{margin-left:6px;padding:8px 12px;border:none;border-radius:6px;cursor:pointer;font-weight:bold}
+.hero{background:linear-gradient(135deg,#0A2540,#163d63);color:#fff;text-align:center;padding:100px 20px}
+.hero h1{font-size:42px;margin-bottom:20px}
+.hero p{max-width:900px;margin:auto}
+.btn{display:inline-block;margin-top:25px;background:#D4AF37;color:#fff;text-decoration:none;padding:14px 28px;border-radius:8px}
+.section{max-width:1200px;margin:auto;padding:70px 20px}
+.section h2{text-align:center;margin-bottom:30px;color:#0A2540}
+.cards{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+.card{background:#fff;width:320px;padding:22px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.08);transition:.3s}
+.card:hover{transform:translateY(-5px)}
+.info{background:#fff;padding:30px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+footer{background:#0A2540;color:#fff;text-align:center;padding:35px}
+.social a{margin:0 8px}
+.float-btn{position:fixed;right:20px;bottom:20px;background:#D4AF37;color:#fff;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold}
+@media(max-width:768px){.hero h1{font-size:30px}header{flex-direction:column;gap:10px}.card{width:100%}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">
+<img src="logo.jpg" alt="logo">
+<div><strong>Document Center Georgia</strong></div>
+</div>
+
+<div class="social">
+<a class="btn" style="margin-top:0;padding:10px 14px" href="https://t.me/DocumentCenterGeorgia" target="_blank">Telegram</a>
+<a class="btn" style="margin-top:0;padding:10px 14px" href="https://www.facebook.com/share/1PL8QVc3py/?mibextid=wwXIfr" target="_blank">Facebook</a>
+<a class="btn" style="margin-top:0;padding:10px 14px" href="https://www.instagram.com/documentcentergeorgia?igsh=aDFoY2Jyamk3em55&utm_source=qr" target="_blank">Instagram</a>
+
+<span class="lang">
+<button onclick="setLanguage('ka')">GEO</button>
+<button onclick="setLanguage('ru')">RU</button>
+<button onclick="setLanguage('en')">ENG</button>
+</span>
+</div>
+</header>
+
+<section class="hero">
+<h1 id="title"></h1>
+<p id="subtitle"></p>
+<a id="heroBtn" class="btn" href="https://t.me/DocumentCenterGeorgia" target="_blank"></a>
+</section>
+
+<section class="section">
+<h2 id="servicesTitle"></h2>
+<div class="cards">
+<div class="card"><h3 id="s1"></h3></div>
+<div class="card"><h3 id="s2"></h3></div>
+<div class="card"><h3 id="s3"></h3></div>
+<div class="card"><h3 id="s4"></h3></div>
+<div class="card"><h3 id="s5"></h3></div>
+<div class="card"><h3 id="s6"></h3></div>
+<div class="card"><h3 id="s7"></h3></div>
+<div class="card"><h3 id="s8"></h3></div>
+<div class="card"><h3 id="s9"></h3></div>
+</div>
+</section>
+
+<section class="section"><h2 id="howTitle"></h2><div class="info" id="howText"></div></section>
+<section class="section"><h2 id="helpTitle"></h2><div class="info" id="helpText"></div></section>
+<section class="section"><h2 id="whyTitle"></h2><div class="info" id="whyText"></div></section>
+<section class="section"><h2 id="missionTitle"></h2><div class="info" id="missionText"></div></section>
+<section class="section"><h2 id="valuesTitle"></h2><div class="info" id="valuesText"></div></section>
+
+<section class="section">
+<h2 id="contactTitle"></h2>
+<div class="info">
+📧 documentcenter.georgia@gmail.com<br><br>
+📱 Telegram: @DocumentCenterGeorgia<br><br>
+📘 Facebook: Document Center Georgia<br><br>
+📷 Instagram: @documentcentergeorgia
+</div>
+</section>
+
+<footer>Document Center Georgia</footer>
+
+<a class="float-btn" href="https://t.me/DocumentCenterGeorgia" target="_blank">Telegram</a>
+
+<script>
+const translations={
+ka:{
+title:"თქვენი სანდო პარტნიორი საქართველოში დოკუმენტური და ადმინისტრაციული მხარდაჭერისთვის",
+subtitle:"უცხოელების, ქართველი ემიგრანტების, ინდივიდუალური მეწარმეებისა და კომპანიების ონლაინ მხარდაჭერა საქართველოში.",
+heroBtn:"მოგვწერეთ Telegram-ზე",
+servicesTitle:"მომსახურებები",
+s1:"დოკუმენტური და ადმინისტრაციული მხარდაჭერა",
+s2:"ინდივიდუალური მეწარმეების დოკუმენტური მხარდაჭერა",
+s3:"კომპანიის დოკუმენტური მხარდაჭერა",
+s4:"HR მხარდაჭერა და დოკუმენტები",
+s5:"ხელშეკრულებების მომზადების მხარდაჭერა",
+s6:"განაცხადებისა და ფორმების შევსების დახმარება",
+s7:"ბინადრობის დოკუმენტების მხარდაჭერა",
+s8:"ემიგრანტებისთვის დისტანციური დახმარება",
+s9:"ონლაინ კონსულტაცია",
+howTitle:"როგორ ვმუშაობთ",
+howText:"1. გვიკავშირდებით Telegram-ზე.<br><br>2. ვსწავლობთ მოთხოვნას.<br><br>3. გეხმარებით დოკუმენტებისა და ადმინისტრაციული პროცესების მომზადებაში.",
+helpTitle:"ვის ვეხმარებით",
+helpText:"უცხოელებს საქართველოში • ქართველ ემიგრანტებს • ინდივიდუალურ მეწარმეებს • კომპანიებს • სტარტაპებს • საერთაშორისო კლიენტებს",
+whyTitle:"რატომ ჩვენ",
+whyText:"სრულად ონლაინ მომსახურება • სწრაფი რეაგირება • ინდივიდუალური მიდგომა • კონფიდენციალურობა • მომსახურება მსოფლიოს ნებისმიერი წერტილიდან",
+missionTitle:"ჩვენი მისია",
+missionText:"ჩვენი მისიაა დოკუმენტური და ადმინისტრაციული მხარდაჭერა გავხადოთ მარტივი, სწრაფი და ხელმისაწვდომი.",
+valuesTitle:"ჩვენი ღირებულებები",
+valuesText:"სანდოობა • პროფესიონალიზმი • გამჭვირვალობა • ხელმისაწვდომობა",
+contactTitle:"კონტაქტი"
+},
+en:{
+title:"Your Trusted Partner for Document and Administrative Support in Georgia",
+subtitle:"Online support for foreigners, expats, entrepreneurs and companies in Georgia.",
+heroBtn:"Contact Us on Telegram",
+servicesTitle:"Services",
+s1:"Document and Administrative Support",
+s2:"Support for Individual Entrepreneurs",
+s3:"Corporate Document Support",
+s4:"HR Support and Documentation",
+s5:"Contract Preparation Support",
+s6:"Application and Form Assistance",
+s7:"Residence Documentation Support",
+s8:"Remote Support for Expats",
+s9:"Online Consultation",
+howTitle:"How We Work",
+howText:"1. Contact us. 2. We review your request. 3. We assist online.",
+helpTitle:"Who We Help",
+helpText:"Foreigners • Expats • Entrepreneurs • Companies • Startups • International Clients",
+whyTitle:"Why Choose Us",
+whyText:"Fully Online • Fast Response • Individual Approach • Confidentiality • Worldwide Support",
+missionTitle:"Our Mission",
+missionText:"To make document and administrative support simple, fast and accessible.",
+valuesTitle:"Our Values",
+valuesText:"Trust • Professionalism • Transparency • Accessibility",
+contactTitle:"Contact"
+},
+ru:{
+title:"Ваш надежный партнер по документальной и административной поддержке в Грузии",
+subtitle:"Онлайн поддержка иностранцев, предпринимателей и компаний в Грузии.",
+heroBtn:"Связаться через Telegram",
+servicesTitle:"Услуги",
+s1:"Документальная и административная поддержка",
+s2:"Поддержка ИП",
+s3:"Поддержка компаний",
+s4:"HR поддержка и документы",
+s5:"Подготовка договоров",
+s6:"Помощь с формами",
+s7:"Документы на проживание",
+s8:"Удаленная помощь эмигрантам",
+s9:"Онлайн консультация",
+howTitle:"Как мы работаем",
+howText:"1. Свяжитесь с нами. 2. Мы изучим запрос. 3. Поможем онлайн.",
+helpTitle:"Кому мы помогаем",
+helpText:"Иностранцам • Предпринимателям • Компаниям • Стартапам",
+whyTitle:"Почему мы",
+whyText:"Полностью онлайн • Быстрая реакция • Индивидуальный подход • Конфиденциальность",
+missionTitle:"Наша миссия",
+missionText:"Сделать документальную поддержку простой и доступной.",
+valuesTitle:"Наши ценности",
+valuesText:"Надежность • Профессионализм • Прозрачность • Доступность",
+contactTitle:"Контакты"
+}
+};
+function setLanguage(lang){
+const t=translations[lang];
+for(const k in t){const el=document.getElementById(k);if(el)el.innerHTML=t[k];}
+}
+setLanguage('ka');
+</script>
+</body>
+</html>
